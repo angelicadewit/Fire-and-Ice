@@ -1,0 +1,2 @@
+"use strict";var hamburger=document.querySelector(".hamburger");hamburger.addEventListener("click",function(){var e=document.querySelector(".overlay");hamburger.classList.toggle("active"),e.classList.toggle("open")});
+//# sourceMappingURL=main.js.map
