@@ -36,20 +36,22 @@ $color-main: #fff;
 $overlay-color: rgba(0, 0, 0, 0.9);
 $color-active: #fff;
 $color-link: #fff;
+$areno: 'areno_roughregular';
 
+
+@font-face {
+    font-family: 'areno_roughregular';
+    src:    url('areno-rough-webfont.woff2') format('woff2'),
+            url('areno-rough-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 /* 2. Content ================================= */
 
-.hero-image{
-	width: 100vw;
-
-	.mobile-header{
-		width: 100%;
-	}
-}
-
-a {
+.nav-links {
 	display: inline-block;
 	position: relative;
 	text-align: center;
@@ -84,7 +86,7 @@ a {
     position: fixed;
     width: 100%;
     height: 60px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     
@@ -117,16 +119,16 @@ a {
             transform: translateY(11px) translateX(0) rotate(45deg);
             background: $color-active;
         }
-	.middle {
-        opacity: 0;
-        background: $color-active;
-	}
-	
-	.bottom {
-        transform: translateY(-11px) translateX(0) rotate(-45deg);
-        background: $color-active;
-	}
-}
+        .middle {
+            opacity: 0;
+            background: $color-active;
+        }
+        
+        .bottom {
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+            background: $color-active;
+        }
+    }
 
     span {
         background: $color-main;
@@ -165,30 +167,30 @@ a {
         opacity: .9;
         visibility: visible;
         height: 100%;
-	
-	li {
-        animation: fadeInRight .5s ease forwards;
-        animation-delay: .35s;
-	
-        &:nth-of-type(2) {
-            animation-delay: .4s;
-	    }
-        &:nth-of-type(3) {
-            animation-delay: .45s;
-	    }
-        &:nth-of-type(4) {
-            animation-delay: .50s;
+        
+        li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+        
+            &:nth-of-type(2) {
+                animation-delay: .4s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: .45s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: .50s;
+            }
+            &:nth-of-type(5) {
+                animation-delay: .55s;
+            }
+            &:nth-of-type(6) {
+                animation-delay: .60s;
+            }
         }
-        &:nth-of-type(5) {
-            animation-delay: .55s;
-        }
-        &:nth-of-type(5) {
-            animation-delay: .60s;
-	    }
-	}
-}
+    }
 
-nav {
+    nav {
         position: relative;
         height: 70%;
         top: 50%;
@@ -207,28 +209,28 @@ nav {
         position: relative;
         height: 100%; 
     
-    li {
-        display: block;
-        height: 25%;
-        height: calc(100% / 4);
-        min-height: 50px;
-        position: relative;
-        opacity: 0;
-
-        a {
+        li {
             display: block;
+            height: 25%;
+            height: calc(100% / 4);
+            min-height: 50px;
             position: relative;
-            color: $color-link;
-            text-decoration: none;
-            overflow: hidden;
-            
-            &:hover:after,
+            opacity: 0;
+
+            a {
+                display: block;
+                position: relative;
+                color: $color-link;
+                text-decoration: none;
+                overflow: hidden;
+                
+                &:hover:after,
                 &:focus:after,
                 &:active:after {
-                width: 100%;
-            }
-        
-            &:after {
+                    width: 100%;
+                }
+            
+                &:after {
                     content: '';
                     position: absolute;
                     bottom: 0;
@@ -240,17 +242,44 @@ nav {
                     transition: .35s;
                 }
             }
-	    }
+        }
     }
 }
 
 @keyframes fadeInRight {
     0% {
-	opacity: 0;
-	left: 20%;
+        opacity: 0;
+        left: 20%;
     }
     100% {
-	opacity: 1;
-	left: 0;
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.hero{
+    // .hero-image{
+        background: url(../img/heroExploreWorldsMobile.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        display: inline-block;
+    // }
+
+    .hero-text{
+        font-family: $areno;
+        // position: absolute;
+        // top: 33%;
+        // left: 14%;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 45%;
+
+
+        // .headline{
+            
+        // }
     }
 }

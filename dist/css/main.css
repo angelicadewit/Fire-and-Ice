@@ -1,2 +1,306 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{-webkit-box-sizing:border-box;box-sizing:border-box}body{background:#ccc;font-family:sans-serif}.hero-image{width:100vw}.hero-image .mobile-header{width:100%}a{display:inline-block;position:relative;text-align:center;color:#fff;text-decoration:none;font-size:30px;overflow:hidden;top:5px;font-family:sans-serif}a:after{content:'';position:absolute;background:#fff;height:2px;width:0%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);left:50%;bottom:0;-webkit-transition:.35s ease;-o-transition:.35s ease;transition:.35s ease}a:active:after,a:focus:after,a:hover:after{width:100%}.header{display:-webkit-box;display:-ms-flexbox;display:flex;position:fixed;width:100%;height:60px;background:rgba(0, 0, 0, 0.7);-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header h1{color:#fff;text-transform:uppercase;font-size:25px}.hamburger{position:fixed;height:27px;width:35px;cursor:pointer;z-index:100;left:5%;-webkit-transition:opacity .25s ease;-o-transition:opacity .25s ease;transition:opacity .25s ease}.hamburger:hover{opacity:.7}.hamburger.active .top{-webkit-transform:translateY(11px) translateX(0) rotate(45deg);-ms-transform:translateY(11px) translateX(0) rotate(45deg);transform:translateY(11px) translateX(0) rotate(45deg);background:#fff}.hamburger.active .middle{opacity:0;background:#fff}.hamburger.active .bottom{-webkit-transform:translateY(-11px) translateX(0) rotate(-45deg);-ms-transform:translateY(-11px) translateX(0) rotate(-45deg);transform:translateY(-11px) translateX(0) rotate(-45deg);background:#fff}.hamburger span{background:#fff;border:none;height:5px;width:100%;position:absolute;top:0;left:0;-webkit-transition:all .35s ease;-o-transition:all .35s ease;transition:all .35s ease;cursor:pointer}.hamburger span:nth-of-type(2){top:11px}.hamburger span:nth-of-type(3){top:22px}.overlay{position:fixed;background:rgba(0, 0, 0, 0.9);top:0;left:0;width:100%;height:0%;opacity:0;visibility:hidden;-webkit-transition:opacity .35s, visibility .35s, height .35s;-o-transition:opacity .35s, visibility .35s, height .35s;transition:opacity .35s, visibility .35s, height .35s;overflow:hidden}.overlay.open{opacity:.9;visibility:visible;height:100%}.overlay.open li{-webkit-animation:fadeInRight .5s ease forwards;animation:fadeInRight .5s ease forwards;-webkit-animation-delay:.35s;animation-delay:.35s}.overlay.open li:nth-of-type(2){-webkit-animation-delay:.4s;animation-delay:.4s}.overlay.open li:nth-of-type(3){-webkit-animation-delay:.45s;animation-delay:.45s}.overlay.open li:nth-of-type(4){-webkit-animation-delay:.50s;animation-delay:.50s}.overlay.open li:nth-of-type(5){-webkit-animation-delay:.55s;animation-delay:.55s}.overlay.open li:nth-of-type(5){-webkit-animation-delay:.60s;animation-delay:.60s}.overlay nav{position:relative;height:70%;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);font-size:50px;font-family:'Varela Round', serif;font-weight:400;text-align:center}.overlay ul{list-style:none;padding:0;margin:0 auto;display:inline-block;position:relative;height:100%}.overlay ul li{display:block;height:25%;height:calc(100% / 4);min-height:50px;position:relative;opacity:0}.overlay ul li a{display:block;position:relative;color:#fff;text-decoration:none;overflow:hidden}.overlay ul li a:active:after,.overlay ul li a:focus:after,.overlay ul li a:hover:after{width:100%}.overlay ul li a:after{content:'';position:absolute;bottom:0;left:50%;width:0%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);height:3px;background:#fff;-webkit-transition:.35s;-o-transition:.35s;transition:.35s}@-webkit-keyframes fadeInRight{0%{opacity:0;left:20%}to{opacity:1;left:0}}@keyframes fadeInRight{0%{opacity:0;left:20%}to{opacity:1;left:0}}
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ccc;
+	font-family: sans-serif;
+}
+
+@font-face {
+	font-family: 'areno_roughregular';
+	src: url("areno-rough-webfont.woff2") format("woff2"), url("areno-rough-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 2. Content ================================= */
+.nav-links {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-size: 30px;
+	overflow: hidden;
+	top: 5px;
+	font-family: sans-serif;
+}
+
+.nav-links:after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	height: 2px;
+	width: 0%;
+	transform: translateX(-50%);
+	left: 50%;
+	bottom: 0;
+	transition: .35s ease;
+}
+
+.nav-links:hover:after, .nav-links:focus:after, .nav-links:active:after {
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.header h1 {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.hamburger {
+	position: fixed;
+	height: 27px;
+	width: 35px;
+	cursor: pointer;
+	z-index: 100;
+	left: 5%;
+	transition: opacity .25s ease;
+}
+
+.hamburger:hover {
+	opacity: .7;
+}
+
+.hamburger.active .top {
+	transform: translateY(11px) translateX(0) rotate(45deg);
+	background: #fff;
+}
+
+.hamburger.active .middle {
+	opacity: 0;
+	background: #fff;
+}
+
+.hamburger.active .bottom {
+	transform: translateY(-11px) translateX(0) rotate(-45deg);
+	background: #fff;
+}
+
+.hamburger span {
+	background: #fff;
+	border: none;
+	height: 5px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .35s ease;
+	cursor: pointer;
+}
+
+.hamburger span:nth-of-type(2) {
+	top: 11px;
+}
+
+.hamburger span:nth-of-type(3) {
+	top: 22px;
+}
+
+.overlay {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.9);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s, visibility .35s, height .35s;
+	overflow: hidden;
+}
+
+.overlay.open {
+	opacity: .9;
+	visibility: visible;
+	height: 100%;
+}
+
+.overlay.open li {
+	animation: fadeInRight .5s ease forwards;
+	animation-delay: .35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+	animation-delay: .4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+	animation-delay: .45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+	animation-delay: .50s;
+}
+
+.overlay.open li:nth-of-type(5) {
+	animation-delay: .55s;
+}
+
+.overlay.open li:nth-of-type(6) {
+	animation-delay: .60s;
+}
+
+.overlay nav {
+	position: relative;
+	height: 70%;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 50px;
+	font-family: 'Varela Round', serif;
+	font-weight: 400;
+	text-align: center;
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+}
+
+.overlay ul li {
+	display: block;
+	height: 25%;
+	height: calc(100% / 4);
+	min-height: 50px;
+	position: relative;
+	opacity: 0;
+}
+
+.overlay ul li a {
+	display: block;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+	width: 100%;
+}
+
+.overlay ul li a:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	transform: translateX(-50%);
+	height: 3px;
+	background: #fff;
+	transition: .35s;
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		left: 20%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.hero {
+	background: url(../img/heroExploreWorldsMobile.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 350px;
+	display: flex;
+	display: inline-block;
+}
+
+.hero .hero-text {
+	font-family: "areno_roughregular";
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 45%;
+}
+
 /*# sourceMappingURL=main.css.map */
