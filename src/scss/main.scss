@@ -89,6 +89,7 @@ $body-text: 'helvetica';
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 100;
     
 
     h1{
@@ -130,7 +131,7 @@ $body-text: 'helvetica';
         }
     }
 
-    span {
+    .nav-span {
         background: $color-main;
         border: none;
         height: 5px;
@@ -292,7 +293,6 @@ $body-text: 'helvetica';
 
 .about{
     background: black;
-    display: inline-block;
     color: white;
     font-family: $body-text;
 
@@ -331,5 +331,22 @@ $body-text: 'helvetica';
         background: rgba(0, 0, 0, 0.0);
         border: 1px solid #f97a32;
         margin-bottom: 40px;
+    }
+}
+
+.tours{
+    background: white;
+
+    .tours-text{
+        text-align: center;
+        position: relative;
+    }
+
+    span{
+        font-family: $areno;
+        color: black;
+        font-size: 25px;
+        display: block;
+        padding: 40px;
     }
 }
