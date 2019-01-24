@@ -291,7 +291,6 @@ body {
 	background-size: cover;
 	width: 100%;
 	height: 350px;
-	display: flex;
 	display: inline-block;
 }
 
@@ -300,7 +299,62 @@ body {
 	color: white;
 	text-align: center;
 	position: relative;
-	top: 45%;
+	top: 48%;
+}
+
+.hero button {
+	font-family: "helvetica";
+	color: white;
+	text-transform: uppercase;
+	padding: 14px 28px;
+	font-size: 16px;
+	background: rgba(0, 0, 0, 0);
+	border: 1px solid white;
+	margin-top: 50px;
+}
+
+.about {
+	background: black;
+	display: inline-block;
+	color: white;
+	font-family: "helvetica";
+}
+
+.about .about-text {
+	text-align: center;
+	position: relative;
+}
+
+.about span {
+	font-family: "areno_roughregular";
+	color: red;
+	font-size: 25px;
+	display: block;
+}
+
+.about span:first-of-type {
+	padding-top: 40px;
+}
+
+.about span:last-of-type {
+	padding-bottom: 40px;
+}
+
+.about p {
+	padding: 0px 40px 40px;
+	line-height: 1.5em;
+	font-size: 20px;
+}
+
+.about button {
+	font-family: "helvetica";
+	color: #f97a32;
+	text-transform: uppercase;
+	padding: 14px 28px;
+	font-size: 16px;
+	background: rgba(0, 0, 0, 0);
+	border: 1px solid #f97a32;
+	margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */

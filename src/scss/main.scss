@@ -37,7 +37,7 @@ $overlay-color: rgba(0, 0, 0, 0.9);
 $color-active: #fff;
 $color-link: #fff;
 $areno: 'areno_roughregular';
-
+$body-text: 'helvetica';
 
 @font-face {
     font-family: 'areno_roughregular';
@@ -263,7 +263,6 @@ $areno: 'areno_roughregular';
         background-size: cover;
         width: 100%;
         height: 350px;
-        display: flex;
         display: inline-block;
     // }
 
@@ -275,11 +274,62 @@ $areno: 'areno_roughregular';
         color: white;
         text-align: center;
         position: relative;
-        top: 45%;
+        top: 48%;
+    }
 
+    button{
+        font-family: $body-text;
+        color: white;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.0);
+        border: 1px solid white;
+        margin-top: 50px;
+    }
 
-        // .headline{
-            
-        // }
+}
+
+.about{
+    background: black;
+    display: inline-block;
+    color: white;
+    font-family: $body-text;
+
+    .about-text{
+        text-align: center;
+        position: relative;
+    }
+
+    span{
+        font-family: $areno;
+        color: red;
+        font-size: 25px;
+        display: block;
+
+        &:first-of-type{
+            padding-top: 40px;
+        }
+
+        &:last-of-type{
+            padding-bottom: 40px;
+        }
+    }
+
+    p{
+        padding: 0px 40px 40px;
+        line-height: 1.5em;
+        font-size: 20px;
+    }
+
+    button{
+        font-family: $body-text;
+        color: #f97a32;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.0);
+        border: 1px solid #f97a32;
+        margin-bottom: 40px;
     }
 }
