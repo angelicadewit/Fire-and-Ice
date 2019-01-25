@@ -328,7 +328,7 @@ $body-text: 'helvetica';
         text-transform: uppercase;
         padding: 14px 28px;
         font-size: 16px;
-        background: rgba(0, 0, 0, 0.0);
+        background: black;
         border: 1px solid #f97a32;
         margin-bottom: 40px;
     }
@@ -349,4 +349,28 @@ $body-text: 'helvetica';
         display: block;
         padding: 40px;
     }
+
+    ul{
+        width: 100%;
+        height: 320px;
+        overflow-x: scroll;
+        overflow-y: hidden; 
+    }
+
+    .popular-tours-list{
+        width: (200px + 6px + 6px) * 5 + 20px;
+    }
+
+    .popular-tour {
+        display: inline-block;
+        background: green;
+        width: 200px;
+        height: 300px;
+        margin: 6px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }
