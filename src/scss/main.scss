@@ -98,6 +98,7 @@ $body-text: 'helvetica';
         color: $color-header;
         text-transform: uppercase;
         font-size: 25px;
+        font-family: $areno;
     }
 }
 
@@ -295,25 +296,22 @@ $body-text: 'helvetica';
     background: black;
     color: white;
     font-family: $body-text;
+    
 
     .about-text{
         text-align: center;
         position: relative;
     }
 
-    span{
+    h2{
         font-family: $areno;
         color: red;
         font-size: 25px;
+        padding: 40px 0px;
+    }
+
+    span{
         display: block;
-
-        &:first-of-type{
-            padding-top: 40px;
-        }
-
-        &:last-of-type{
-            padding-bottom: 40px;
-        }
     }
 
     p{
@@ -336,6 +334,7 @@ $body-text: 'helvetica';
 
 .tours{
     background: white;
+    padding-bottom: 30px;
 
     .tours-text{
         text-align: center;
@@ -367,10 +366,98 @@ $body-text: 'helvetica';
         width: 200px;
         height: 300px;
         margin: 6px;
+        position: relative;
+
+        .pop-tour-desc{
+            position:absolute;
+            bottom: 0;
+            padding-bottom: 25px;
+
+            span{
+                padding: 0px 0px 0px 20px;
+                color: white;
+            }
+        }
         
         &:last-child {
             margin-right: 0;
         }
+
+        &.norlights{
+            background: url(../img/northernlights-mobile.jpg);
+            background-size: cover;
+            border-bottom: 30px solid #0f161d;
+        }
+
+        &.blulagoon{
+            background: url(../img/bluelagoon-mobile.jpg);
+            background-size: cover;
+            border-bottom: 30px solid #00806f;
+        }
+
+        &.volunderground{
+            background: url(../img/volcanopark-mobile.jpg);
+            background-size: cover;
+            border-bottom: 30px solid #fa5b00;
+        }
+
+        &.vantpark{
+            background: url(../img/park-mbile.jpg);
+            background-size: cover;
+            border-bottom: 30px solid #538ba3;
+        }
+
+        &.golcircle{
+            background: url(../img/goldencircle-mobile.jpg);
+            background-size: cover;
+            border-bottom: 30px solid #e52e1f;
+        }
+    }
+}
+
+.chatbox-sect{
+
+    background: url(../img/chatexpert.jpg) no-repeat;
+    background-size: contain;
+    background-position-x: 0;
+    padding: 155px 30px 50px;
+    color: #3a343a;
+    line-height: 1.5em;
+    font-size: 18px;
+
+    .chatbox{
+        padding: 50px;
+        background: white;
+        text-align: center;
+    
+        .talkicon{
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35px; 
+        }
     }
 
+    h3{
+        font-family: $areno;
+        font-size: 24px;
+        padding: 20px 0px;
+        color: #538ba3;
+    }
+
+    span{
+        display: inline-block;
+    }
+
+    button{
+        font-family: $body-text;
+        color: #f97a32;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        font-size: 16px;
+        background: white;
+        border: 1px solid #f97a32;
+        margin-top: 30px;
+    }
 }

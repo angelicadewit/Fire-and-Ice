@@ -128,6 +128,7 @@ body {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 25px;
+	font-family: "areno_roughregular";
 }
 
 .hamburger {
@@ -325,19 +326,15 @@ body {
 	position: relative;
 }
 
-.about span {
+.about h2 {
 	font-family: "areno_roughregular";
 	color: red;
 	font-size: 25px;
+	padding: 40px 0px;
+}
+
+.about span {
 	display: block;
-}
-
-.about span:first-of-type {
-	padding-top: 40px;
-}
-
-.about span:last-of-type {
-	padding-bottom: 40px;
 }
 
 .about p {
@@ -359,6 +356,7 @@ body {
 
 .tours {
 	background: white;
+	padding-bottom: 30px;
 }
 
 .tours .tours-text {
@@ -391,10 +389,98 @@ body {
 	width: 200px;
 	height: 300px;
 	margin: 6px;
+	position: relative;
+}
+
+.tours .popular-tour .pop-tour-desc {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 25px;
+}
+
+.tours .popular-tour .pop-tour-desc span {
+	padding: 0px 0px 0px 20px;
+	color: white;
 }
 
 .tours .popular-tour:last-child {
 	margin-right: 0;
+}
+
+.tours .popular-tour.norlights {
+	background: url(../img/northernlights-mobile.jpg);
+	background-size: cover;
+	border-bottom: 30px solid #0f161d;
+}
+
+.tours .popular-tour.blulagoon {
+	background: url(../img/bluelagoon-mobile.jpg);
+	background-size: cover;
+	border-bottom: 30px solid #00806f;
+}
+
+.tours .popular-tour.volunderground {
+	background: url(../img/volcanopark-mobile.jpg);
+	background-size: cover;
+	border-bottom: 30px solid #fa5b00;
+}
+
+.tours .popular-tour.vantpark {
+	background: url(../img/park-mbile.jpg);
+	background-size: cover;
+	border-bottom: 30px solid #538ba3;
+}
+
+.tours .popular-tour.golcircle {
+	background: url(../img/goldencircle-mobile.jpg);
+	background-size: cover;
+	border-bottom: 30px solid #e52e1f;
+}
+
+.chatbox-sect {
+	background: url(../img/chatexpert.jpg) no-repeat;
+	background-size: contain;
+	background-position-x: 0;
+	padding: 155px 30px 50px;
+	color: #3a343a;
+	line-height: 1.5em;
+	font-size: 18px;
+}
+
+.chatbox-sect .chatbox {
+	padding: 50px;
+	background: white;
+	text-align: center;
+}
+
+.chatbox-sect .chatbox .talkicon {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35px;
+}
+
+.chatbox-sect h3 {
+	font-family: "areno_roughregular";
+	font-size: 24px;
+	padding: 20px 0px;
+	color: #538ba3;
+}
+
+.chatbox-sect span {
+	display: inline-block;
+}
+
+.chatbox-sect button {
+	font-family: "helvetica";
+	color: #f97a32;
+	text-transform: uppercase;
+	padding: 14px 28px;
+	font-size: 16px;
+	background: white;
+	border: 1px solid #f97a32;
+	margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
