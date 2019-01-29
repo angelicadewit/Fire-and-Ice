@@ -339,7 +339,7 @@ header{
         margin-top: 32%;
 
         @include desktop{
-            margin: 3% 0% 25%;
+            margin: 3% 0% 20%;
         }
         
 
@@ -408,18 +408,32 @@ header{
     h3{
         font-family: $areno;
         color: red;
-        font-size: 25px;
+        font-size: 1em;
         padding: 40px 0px;
+
+        @include desktop{
+            font-size: 2em;
+            padding: 30px;
+        }
     }
 
     span{
         display: block;
+
+        @include desktop{
+            display: inline;
+        }
     }
 
     p{
         padding: 0px 40px 40px;
         line-height: 1.5em;
         font-size: 20px;
+
+        @include desktop{
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
 
     button{
@@ -453,13 +467,20 @@ header{
 
     ul{
         width: 100%;
-        height: 320px;
+        min-height: 320px;
+        height: fit-content;
         overflow-x: scroll;
         overflow-y: hidden; 
     }
 
     .popular-tours-list{
         width: (200px + 6px + 6px) * 5 + 20px;
+
+        @include desktop{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     .popular-tour {
@@ -469,6 +490,11 @@ header{
         height: 300px;
         margin: 6px;
         position: relative;
+
+        @include desktop{
+            width: 350px;
+            height: 400px;
+        }
 
         .pop-tour-desc{
             position:absolute;
@@ -571,6 +597,11 @@ header{
     .tours-text{
         text-align: center;
         position: relative;
+
+        @include desktop{
+            text-align: left;
+            padding-left: 30px;
+        }
     }
 
     span{
@@ -590,6 +621,10 @@ header{
 
     .popular-tours-list{
         width: (200px + 6px + 6px) * 4 + 20px;
+
+        @include desktop{
+            width: 100%;
+        }
     }
 
     .popular-tour {
@@ -634,14 +669,21 @@ footer{
     font-size: 15px;
     display: flex;
 
+
     span{
         text-transform: uppercase;
         display: block;
         padding-top: 5px;
+
+        @include desktop{
+            display: inline;
+        }
     }
 
     .contact-info{
         text-align: right;
+        display: flex;
+        justify-content: space-between;
     }
     
     p{

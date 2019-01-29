@@ -347,7 +347,7 @@ header .desktop-logo {
 
 @media only screen and (min-width: 1280px) {
 	.hero .hero-text {
-		margin: 3% 0% 25%;
+		margin: 3% 0% 20%;
 	}
 }
 
@@ -415,18 +415,38 @@ header .desktop-logo {
 .about h3 {
 	font-family: "areno_roughregular";
 	color: red;
-	font-size: 25px;
+	font-size: 1em;
 	padding: 40px 0px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.about h3 {
+		font-size: 2em;
+		padding: 30px;
+	}
 }
 
 .about span {
 	display: block;
 }
 
+@media only screen and (min-width: 1280px) {
+	.about span {
+		display: inline;
+	}
+}
+
 .about p {
 	padding: 0px 40px 40px;
 	line-height: 1.5em;
 	font-size: 20px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.about p {
+		max-width: 600px;
+		margin: 0 auto;
+	}
 }
 
 .about button {
@@ -460,13 +480,22 @@ header .desktop-logo {
 
 .tours ul {
 	width: 100%;
-	height: 320px;
+	min-height: 320px;
+	height: fit-content;
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
 
 .tours .popular-tours-list {
 	width: 1080px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.tours .popular-tours-list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .tours .popular-tour {
@@ -476,6 +505,13 @@ header .desktop-logo {
 	height: 300px;
 	margin: 6px;
 	position: relative;
+}
+
+@media only screen and (min-width: 1280px) {
+	.tours .popular-tour {
+		width: 350px;
+		height: 400px;
+	}
 }
 
 .tours .popular-tour .pop-tour-desc {
@@ -579,6 +615,13 @@ header .desktop-logo {
 	position: relative;
 }
 
+@media only screen and (min-width: 1280px) {
+	.instagram .tours-text {
+		text-align: left;
+		padding-left: 30px;
+	}
+}
+
 .instagram span {
 	font-family: "areno_roughregular";
 	color: black;
@@ -596,6 +639,12 @@ header .desktop-logo {
 
 .instagram .popular-tours-list {
 	width: 868px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.instagram .popular-tours-list {
+		width: 100%;
+	}
 }
 
 .instagram .popular-tour {
@@ -645,8 +694,16 @@ footer span {
 	padding-top: 5px;
 }
 
+@media only screen and (min-width: 1280px) {
+	footer span {
+		display: inline;
+	}
+}
+
 footer .contact-info {
 	text-align: right;
+	display: flex;
+	justify-content: space-between;
 }
 
 footer p {
