@@ -86,35 +86,7 @@ body {
 
 /* 2. Content ================================= */
 /* HOME */
-.nav-links {
-	display: inline-block;
-	position: relative;
-	text-align: center;
-	color: #fff;
-	text-decoration: none;
-	font-size: 30px;
-	overflow: hidden;
-	top: 5px;
-	font-family: sans-serif;
-}
-
-.nav-links:after {
-	content: '';
-	position: absolute;
-	background: #fff;
-	height: 2px;
-	width: 0%;
-	transform: translateX(-50%);
-	left: 50%;
-	bottom: 0;
-	transition: .35s ease;
-}
-
-.nav-links:hover:after, .nav-links:focus:after, .nav-links:active:after {
-	width: 100%;
-}
-
-.header {
+header {
 	display: flex;
 	position: fixed;
 	width: 100%;
@@ -125,11 +97,32 @@ body {
 	z-index: 100;
 }
 
-.header h1 {
+header h1 {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 25px;
 	font-family: "areno_roughregular";
+}
+
+@media only screen and (min-width: 1280px) {
+	header .mobile-logo {
+		visibility: hidden;
+	}
+}
+
+header .desktop-logo {
+	visibility: hidden;
+}
+
+@media only screen and (min-width: 1280px) {
+	header .desktop-logo {
+		visibility: visible;
+		display: block;
+		position: relative;
+		top: 5px;
+		color: #e52e1f;
+		font-size: 30px;
+	}
 }
 
 .hamburger {
@@ -140,6 +133,12 @@ body {
 	z-index: 100;
 	left: 5%;
 	transition: opacity .25s ease;
+}
+
+@media only screen and (min-width: 1280px) {
+	.hamburger {
+		display: none;
+	}
 }
 
 .hamburger:hover {
@@ -194,6 +193,15 @@ body {
 	overflow: hidden;
 }
 
+@media only screen and (min-width: 1280px) {
+	.overlay {
+		visibility: visible;
+		height: 10%;
+		opacity: 1;
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
 .overlay.open {
 	opacity: .9;
 	visibility: visible;
@@ -227,13 +235,19 @@ body {
 
 .overlay nav {
 	position: relative;
-	height: 70%;
+	height: 50%;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 50px;
 	font-family: 'Varela Round', serif;
 	font-weight: 400;
 	text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+	.overlay nav {
+		height: 100%;
+	}
 }
 
 .overlay ul {
@@ -245,6 +259,24 @@ body {
 	height: 100%;
 }
 
+@media only screen and (min-width: 1280px) {
+	.overlay ul {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: baseline;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.overlay ul .left-nav,
+	.overlay ul .right-nav {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
 .overlay ul li {
 	display: block;
 	height: 25%;
@@ -254,28 +286,28 @@ body {
 	opacity: 0;
 }
 
+@media only screen and (min-width: 1280px) {
+	.overlay ul li {
+		opacity: 1;
+	}
+}
+
 .overlay ul li a {
 	display: block;
 	position: relative;
 	color: #fff;
 	text-decoration: none;
+	text-transform: uppercase;
 	overflow: hidden;
-}
-
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-	width: 100%;
-}
-
-.overlay ul li a:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0%;
-	transform: translateX(-50%);
-	height: 3px;
-	background: #fff;
+	font-size: 20px;
+	padding: 20px;
 	transition: .35s;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay ul li a:hover, .overlay ul li a:focus, .overlay ul li a:active {
+	color: white;
+	background-color: #f95a00;
 }
 
 @keyframes fadeInRight {
@@ -290,11 +322,18 @@ body {
 }
 
 .hero {
-	background: url(../img/heroExploreWorldsMobile.jpg) no-repeat;
+	background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 350px;
 	display: inline-block;
+}
+
+@media only screen and (min-width: 1280px) {
+	.hero {
+		background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
+		background-size: cover;
+		height: 56.25vw;
+	}
 }
 
 .hero .hero-text {
@@ -302,7 +341,13 @@ body {
 	color: white;
 	text-align: center;
 	position: relative;
-	top: 48%;
+	margin-top: 32%;
+}
+
+.hero .hero-text h2 {
+	font-size: 40px;
+	padding-top: 20%;
+	padding-bottom: 20px;
 }
 
 .hero button {
@@ -313,7 +358,13 @@ body {
 	font-size: 16px;
 	background: rgba(0, 0, 0, 0);
 	border: 1px solid white;
-	margin-top: 50px;
+	margin: 50px 0px 100px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.hero button {
+		display: none;
+	}
 }
 
 .about {
@@ -327,7 +378,7 @@ body {
 	position: relative;
 }
 
-.about h2 {
+.about h3 {
 	font-family: "areno_roughregular";
 	color: red;
 	font-size: 25px;

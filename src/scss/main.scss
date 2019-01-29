@@ -17,6 +17,8 @@ TABLE OF CONTENTS:
 @import 'reset';
 
 
+
+
 /* 1. Main Layout ================================= */
 
 * {
@@ -48,42 +50,29 @@ $body-text: 'helvetica';
 
 }
 
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 1280px;
+
+@mixin tablet {
+	@media only screen and (min-width: $tablet-breakpoint){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: $desktop-breakpoint){
+		@content;
+	}
+}
+
+
 
 /* 2. Content ================================= */
 
 /* HOME */
 
-.nav-links {
-	display: inline-block;
-	position: relative;
-	text-align: center;
-	color: $color-main;
-	text-decoration: none;
-	font-size: 30px;
-	overflow: hidden;
-    top: 5px;
-    font-family: sans-serif;
-	
-	&:after {
-        content: '';
-        position: absolute;
-        background: $color-main;
-        height: 2px;
-        width: 0%;
-        transform: translateX(-50%);
-        left: 50%;
-        bottom: 0;
-        transition: .35s ease;
-    }
-    
-    &:hover:after,
-    &:focus:after,
-    &:active:after {
-        width: 100%;
-    }
-}
 
-.header{
+header{
     display: flex;
     position: fixed;
     width: 100%;
@@ -102,6 +91,25 @@ $body-text: 'helvetica';
         font-size: 25px;
         font-family: $areno;
     }
+
+    .mobile-logo{
+        @include desktop{
+            visibility: hidden;
+        }
+    }
+
+    .desktop-logo{
+        visibility: hidden;
+
+        @include desktop{
+            visibility: visible;
+            display: block;
+            position: relative;
+            top: 5px;
+            color: #e52e1f;
+            font-size: 30px;
+        }
+    }
 }
 
 
@@ -113,6 +121,10 @@ $body-text: 'helvetica';
     z-index: 100;
     left: 5%;
     transition: opacity .25s ease;
+
+    @include desktop{
+        display: none;
+    }
 
     &:hover {
 	    opacity: .7;
@@ -166,6 +178,14 @@ $body-text: 'helvetica';
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
+
+    @include desktop{
+        visibility: visible;
+        height: 10%;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.0);
+
+    }
     
     &.open {
         opacity: .9;
@@ -196,13 +216,17 @@ $body-text: 'helvetica';
 
     nav {
         position: relative;
-        height: 70%;
+        height: 50%;
         top: 50%;
         transform: translateY(-50%);
         font-size: 50px;
         font-family: 'Varela Round', serif;
         font-weight: 400;
         text-align: center;
+
+        @include desktop{
+            height: 100%;
+        }
     }
 
     ul {
@@ -212,7 +236,23 @@ $body-text: 'helvetica';
         display: inline-block;
         position: relative;
         height: 100%; 
-    
+
+        @include desktop{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: baseline;
+        }  
+        
+        .left-nav,
+        .right-nav{
+            @include desktop{
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
         li {
             display: block;
             height: 25%;
@@ -220,31 +260,43 @@ $body-text: 'helvetica';
             min-height: 50px;
             position: relative;
             opacity: 0;
+    
+
+            @include desktop{
+                opacity: 1;
+            }
 
             a {
                 display: block;
                 position: relative;
                 color: $color-link;
                 text-decoration: none;
+                text-transform: uppercase;
                 overflow: hidden;
+                font-size: 20px;
+                padding: 20px;
+                transition: .35s;
+                font-family: Arial, Helvetica, sans-serif;
+
                 
-                &:hover:after,
-                &:focus:after,
-                &:active:after {
-                    width: 100%;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: white;
+                    background-color: #f95a00;
                 }
             
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    width: 0%;
-                    transform: translateX(-50%);
-                    height: 3px;
-                    background: $color-link;
-                    transition: .35s;
-                }
+                // &:after {
+                //     content: '';
+                //     position: absolute;
+                //     bottom: 0;
+                //     left: 50%;
+                //     width: 0%;
+                //     transform: translateX(-50%);
+                //     height: 3px;
+                //     background: #f95a00;
+                //     transition: .35s;
+                // }
             }
         }
     }
@@ -262,23 +314,34 @@ $body-text: 'helvetica';
 }
 
 .hero{
-    // .hero-image{
-        background: url(../img/heroExploreWorldsMobile.jpg) no-repeat;
+// .hero-image{
+    background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: inline-block;
+// }
+
+    @include desktop{
+        background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
         background-size: cover;
-        width: 100%;
-        height: 350px;
-        display: inline-block;
-    // }
+        height: 56.25vw;
+    }
+
 
     .hero-text{
         font-family: $areno;
-        // position: absolute;
-        // top: 33%;
         // left: 14%;
         color: white;
         text-align: center;
         position: relative;
-        top: 48%;
+        margin-top: 32%;
+        
+
+        h2{
+            font-size: 40px;
+            padding-top: 20%;
+            padding-bottom: 20px;
+        }
     }
 
     button{
@@ -289,7 +352,11 @@ $body-text: 'helvetica';
         font-size: 16px;
         background: rgba(0, 0, 0, 0.0);
         border: 1px solid white;
-        margin-top: 50px;
+        margin: 50px 0px 100px;
+
+        @include desktop{
+            display: none;
+        }
     }
 }
 
@@ -304,7 +371,7 @@ $body-text: 'helvetica';
         position: relative;
     }
 
-    h2{
+    h3{
         font-family: $areno;
         color: red;
         font-size: 25px;
