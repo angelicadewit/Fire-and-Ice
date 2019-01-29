@@ -27,7 +27,8 @@ TABLE OF CONTENTS:
 
 body {
 	background: #ccc;
-	font-family: sans-serif;
+    font-family: sans-serif;
+    transition: 0.2s;
 }
 
 $button-height: 27px;
@@ -316,15 +317,16 @@ header{
 .hero{
 // .hero-image{
     background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
+    background-color: black;
     background-size: cover;
     width: 100%;
     display: inline-block;
+    transition: 0.2s;
 // }
 
     @include desktop{
-        background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
-        background-size: cover;
-        height: 56.25vw;
+        background-position-y: -100px;
+        // height: 50vw;
     }
 
 
@@ -335,12 +337,44 @@ header{
         text-align: center;
         position: relative;
         margin-top: 32%;
+
+        @include desktop{
+            margin: 3% 0% 25%;
+        }
         
 
         h2{
-            font-size: 40px;
+            font-size: 2.5em;
             padding-top: 20%;
             padding-bottom: 20px;
+
+            @include desktop{
+                font-size: 8em;
+                
+                .first-word-h2{
+                    text-align: left;
+                    margin: -9% 7%;
+                }
+
+                .second-word-h2{
+                    text-align: center;
+                    margin: 9% 7%;
+                }
+
+                .third-word-h2{
+                    text-align: right;
+                    margin: -13% 7%;
+                }
+            }
+        }
+
+        .hero-span{
+            @include desktop{
+                font-size: 3em;
+                margin: 15%;
+                position: relative;
+                display: block;
+            }
         }
     }
 
