@@ -669,6 +669,12 @@ footer{
     font-size: 15px;
     display: flex;
 
+    @include desktop{
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
 
     span{
         text-transform: uppercase;
@@ -682,8 +688,12 @@ footer{
 
     .contact-info{
         text-align: right;
-        display: flex;
-        justify-content: space-between;
+
+        @include desktop{
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-evenly;
+        }   
     }
     
     p{

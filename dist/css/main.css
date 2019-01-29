@@ -688,6 +688,14 @@ footer {
 	display: flex;
 }
 
+@media only screen and (min-width: 1280px) {
+	footer {
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+}
+
 footer span {
 	text-transform: uppercase;
 	display: block;
@@ -702,8 +710,14 @@ footer span {
 
 footer .contact-info {
 	text-align: right;
-	display: flex;
-	justify-content: space-between;
+}
+
+@media only screen and (min-width: 1280px) {
+	footer .contact-info {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-evenly;
+	}
 }
 
 footer p {
