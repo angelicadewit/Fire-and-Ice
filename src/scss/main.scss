@@ -562,10 +562,19 @@ header{
     line-height: 1.5em;
     font-size: 18px;
 
+    @include desktop{
+        padding: 0px;
+    }
+
     .chatbox{
         padding: 50px;
         background: white;
         text-align: center;
+
+        @include desktop{
+            width: 50%;
+            margin: 0 50%;
+        }
     
         .talkicon{
             display: block;

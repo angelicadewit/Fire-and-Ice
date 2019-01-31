@@ -576,10 +576,23 @@ header .desktop-logo {
 	font-size: 18px;
 }
 
+@media only screen and (min-width: 1280px) {
+	.chatbox-sect {
+		padding: 0px;
+	}
+}
+
 .chatbox-sect .chatbox {
 	padding: 50px;
 	background: white;
 	text-align: center;
+}
+
+@media only screen and (min-width: 1280px) {
+	.chatbox-sect .chatbox {
+		width: 50%;
+		margin: 0 50%;
+	}
 }
 
 .chatbox-sect .chatbox .talkicon {
