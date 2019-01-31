@@ -29,6 +29,7 @@ body {
 	background: #ccc;
     font-family: sans-serif;
     transition: 0.2s;
+    font-weight: lighter;
 }
 
 $button-height: 27px;
@@ -40,7 +41,7 @@ $overlay-color: rgba(0, 0, 0, 0.9);
 $color-active: #fff;
 $color-link: #fff;
 $areno: 'areno_roughregular';
-$body-text: 'helvetica';
+$body-text: 'helvetica-light';
 
 @font-face {
     font-family: 'areno_roughregular';
@@ -348,22 +349,30 @@ header{
             padding-top: 20%;
             padding-bottom: 20px;
 
-            @include desktop{
-                font-size: 8em;
-                
-                .first-word-h2{
+            .first-word-h2{
+
+                @include desktop{
                     text-align: left;
                     margin: -9% 7%;
+                    font-size: 2.5em;
                 }
+            }
 
-                .second-word-h2{
+            .second-word-h2{
+
+                @include desktop{
                     text-align: center;
-                    margin: 9% 7%;
+                    margin: 9%;
+                    font-size: 3em;
                 }
+            }
 
-                .third-word-h2{
+            .third-word-h2{
+
+                @include desktop{
                     text-align: right;
                     margin: -13% 7%;
+                    font-size: 3.5em;
                 }
             }
         }

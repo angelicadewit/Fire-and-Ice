@@ -76,6 +76,7 @@ body {
 	background: #ccc;
 	font-family: sans-serif;
 	transition: 0.2s;
+	font-weight: lighter;
 }
 
 @font-face {
@@ -358,20 +359,26 @@ header .desktop-logo {
 }
 
 @media only screen and (min-width: 1280px) {
-	.hero .hero-text h2 {
-		font-size: 8em;
-	}
 	.hero .hero-text h2 .first-word-h2 {
 		text-align: left;
 		margin: -9% 7%;
+		font-size: 2.5em;
 	}
+}
+
+@media only screen and (min-width: 1280px) {
 	.hero .hero-text h2 .second-word-h2 {
 		text-align: center;
-		margin: 9% 7%;
+		margin: 9%;
+		font-size: 3em;
 	}
+}
+
+@media only screen and (min-width: 1280px) {
 	.hero .hero-text h2 .third-word-h2 {
 		text-align: right;
 		margin: -13% 7%;
+		font-size: 3.5em;
 	}
 }
 
@@ -385,7 +392,7 @@ header .desktop-logo {
 }
 
 .hero button {
-	font-family: "helvetica";
+	font-family: "helvetica-light";
 	color: white;
 	text-transform: uppercase;
 	padding: 14px 28px;
@@ -404,7 +411,7 @@ header .desktop-logo {
 .about {
 	background: black;
 	color: white;
-	font-family: "helvetica";
+	font-family: "helvetica-light";
 }
 
 .about .about-text {
@@ -450,7 +457,7 @@ header .desktop-logo {
 }
 
 .about button {
-	font-family: "helvetica";
+	font-family: "helvetica-light";
 	color: #f97a32;
 	text-transform: uppercase;
 	padding: 14px 28px;
@@ -595,7 +602,7 @@ header .desktop-logo {
 }
 
 .chatbox-sect button {
-	font-family: "helvetica";
+	font-family: "helvetica-light";
 	color: #f97a32;
 	text-transform: uppercase;
 	padding: 14px 50px;
