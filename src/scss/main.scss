@@ -574,6 +574,7 @@ header{
         @include desktop{
             width: 50%;
             margin: 0 50%;
+            padding: 10%;
         }
     
         .talkicon{
@@ -582,6 +583,10 @@ header{
             margin-left: auto;
             margin-right: auto;
             width: 35px; 
+
+            @include desktop{
+                width: 40px;
+            }
         }
     }
 
@@ -590,6 +595,10 @@ header{
         font-size: 24px;
         padding: 20px 0px;
         color: #538ba3;
+
+        @include desktop{
+            font-size: 38px;
+        }
     }
 
     span{
