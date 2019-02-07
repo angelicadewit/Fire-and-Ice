@@ -365,6 +365,10 @@ header{
         position: relative;
         margin-top: 32%;
 
+        // @include tablet{
+        //     margin: 3% 0% 20%;
+        // }
+
         @include desktop{
             margin: 3% 0% 20%;
         }
@@ -372,9 +376,14 @@ header{
 
         h2{
             font-size: 2.5em;
-            padding-bottom: 20px;
+            padding-bottom: 10%;
             display: flex;
             justify-content: space-evenly;
+
+            @include tablet{
+                font-size: 4em;
+                padding-bottom: 50px;
+            }
 
             @include desktop{
                 padding-top: 20%;
@@ -407,11 +416,23 @@ header{
                     font-size: 7.5vw;
                 }
             }
+
+            .zindex-span{
+                
+                @include tablet{
+                    position: relative;
+                    z-index: 3;
+                }
+            }
         }
 
         .hero-span{
             position: relative;
             z-index: 3;
+
+            @include tablet{
+                font-size: 1.5em;
+            }
             @include desktop{
                 font-size: 3em;
                 margin: 15%;
@@ -429,7 +450,15 @@ header{
         font-size: 16px;
         background: rgba(0, 0, 0, 0.0);
         border: 1px solid white;
-        margin: 50px 0px 100px;
+        // margin: 50px 0px 100px;
+        margin: 0% auto;
+        margin-top: 10%;
+        margin-bottom: 20%;
+        display: block;
+
+        @include tablet{
+            margin: 20% auto;
+        }
 
         @include desktop{
             display: none;
@@ -454,7 +483,7 @@ header{
         font-size: 1.5em;
         padding: 40px 0px;
 
-        @include desktop{
+        @include tablet{
             font-size: 2em;
             padding: 30px;
         }
@@ -469,9 +498,13 @@ header{
     }
 
     p{
-        padding: 0px 40px 40px;
+        padding: 0px 10% 10%;
         line-height: 1.5em;
-        font-size: 20px;
+        font-size: 1.25em;
+
+        @include tablet{
+            padding: 0px 13% 10%;
+        }
 
         @include desktop{
             max-width: 600px;
@@ -550,7 +583,7 @@ header{
                 color: white;
                 
                 @include desktop{
-                    font-size: 2.5em;
+                    font-size: 1.85em
                 }
             }
         }

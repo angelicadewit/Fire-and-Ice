@@ -369,9 +369,16 @@ header .desktop-logo {
 
 .hero .hero-text h2 {
 	font-size: 2.5em;
-	padding-bottom: 20px;
+	padding-bottom: 10%;
 	display: flex;
 	justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 640px) {
+	.hero .hero-text h2 {
+		font-size: 4em;
+		padding-bottom: 50px;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -405,9 +412,22 @@ header .desktop-logo {
 	}
 }
 
+@media only screen and (min-width: 640px) {
+	.hero .hero-text h2 .zindex-span {
+		position: relative;
+		z-index: 3;
+	}
+}
+
 .hero .hero-text .hero-span {
 	position: relative;
 	z-index: 3;
+}
+
+@media only screen and (min-width: 640px) {
+	.hero .hero-text .hero-span {
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -427,7 +447,16 @@ header .desktop-logo {
 	font-size: 16px;
 	background: rgba(0, 0, 0, 0);
 	border: 1px solid white;
-	margin: 50px 0px 100px;
+	margin: 0% auto;
+	margin-top: 10%;
+	margin-bottom: 20%;
+	display: block;
+}
+
+@media only screen and (min-width: 640px) {
+	.hero button {
+		margin: 20% auto;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -454,7 +483,7 @@ header .desktop-logo {
 	padding: 40px 0px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 640px) {
 	.about h3 {
 		font-size: 2em;
 		padding: 30px;
@@ -472,9 +501,15 @@ header .desktop-logo {
 }
 
 .about p {
-	padding: 0px 40px 40px;
+	padding: 0px 10% 10%;
 	line-height: 1.5em;
-	font-size: 20px;
+	font-size: 1.25em;
+}
+
+@media only screen and (min-width: 640px) {
+	.about p {
+		padding: 0px 13% 10%;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -563,7 +598,7 @@ header .desktop-logo {
 
 @media only screen and (min-width: 1024px) {
 	.tours .popular-tour .pop-tour-desc span {
-		font-size: 2.5em;
+		font-size: 1.85em;
 	}
 }
 
