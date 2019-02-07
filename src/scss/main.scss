@@ -26,7 +26,7 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: #ccc;
+	background: #fff;
     font-family: sans-serif;
     transition: 0.2s;
     font-weight: lighter;
@@ -53,7 +53,7 @@ $body-text: 'helvetica-light';
 }
 
 $tablet-breakpoint: 640px;
-$desktop-breakpoint: 1280px;
+$desktop-breakpoint: 1024px;
 
 @mixin tablet {
 	@media only screen and (min-width: $tablet-breakpoint){
@@ -317,17 +317,43 @@ header{
 
 .hero{
 // .hero-image{
-    background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
+    position: relative;
+    background: url(../img/home-background.jpg) no-repeat;
     background-color: black;
     background-size: cover;
+    background-position: 50% 100%;
     width: 100%;
     display: inline-block;
     transition: 0.2s;
 // }
 
     @include desktop{
-        background-position-y: -100px;
+        // background-position-y: -100px;
         // height: 50vw;
+    }
+
+    .layered-for-text-wrapped{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/home-foreground.png) no-repeat;
+        background-size: cover;
+        background-position: 50% 100%;
+
+        @include desktop{
+            // background-position-y: -100px;
+            // height: 50vw;
+        }
+    }
+
+    .layered-for-text{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
 
@@ -346,15 +372,21 @@ header{
 
         h2{
             font-size: 2.5em;
-            padding-top: 20%;
             padding-bottom: 20px;
+            display: flex;
+            justify-content: space-evenly;
+
+            @include desktop{
+                padding-top: 20%;
+                display: block;
+            }
 
             .first-word-h2{
 
                 @include desktop{
                     text-align: left;
                     margin: -9% 7%;
-                    font-size: 2.5em;
+                    font-size: 6.5vw;
                 }
             }
 
@@ -363,7 +395,7 @@ header{
                 @include desktop{
                     text-align: center;
                     margin: 9%;
-                    font-size: 3em;
+                    font-size: 7vw;
                 }
             }
 
@@ -372,12 +404,14 @@ header{
                 @include desktop{
                     text-align: right;
                     margin: -13% 7%;
-                    font-size: 3.5em;
+                    font-size: 7.5vw;
                 }
             }
         }
 
         .hero-span{
+            position: relative;
+            z-index: 3;
             @include desktop{
                 font-size: 3em;
                 margin: 15%;
@@ -417,7 +451,7 @@ header{
     h3{
         font-family: $areno;
         color: red;
-        font-size: 1em;
+        font-size: 1.5em;
         padding: 40px 0px;
 
         @include desktop{
@@ -458,7 +492,6 @@ header{
 }
 
 .tours{
-    background: white;
     padding-bottom: 30px;
 
     .tours-text{
@@ -499,6 +532,8 @@ header{
         height: 300px;
         margin: 6px;
         position: relative;
+        background-size: cover;
+        border-bottom: 30px solid green;
 
         @include desktop{
             width: 350px;
@@ -513,6 +548,10 @@ header{
             span{
                 padding: 0px 0px 0px 20px;
                 color: white;
+                
+                @include desktop{
+                    font-size: 2.5em;
+                }
             }
         }
         
@@ -522,20 +561,17 @@ header{
 
         &.norlights{
             background: url(../img/northernlights-mobile.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #0f161d;
+            border-bottom-color: #0f161d;
         }
 
         &.blulagoon{
             background: url(../img/bluelagoon-mobile.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #00806f;
+            border-bottom-color: #00806f;
         }
 
         &.volunderground{
             background: url(../img/volcanopark-mobile.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #fa5b00;
+            border-bottom-color: #fa5b00;
         }
 
         &.vantpark{
@@ -555,6 +591,7 @@ header{
 .chatbox-sect{
 
     background: url(../img/chatexpert.jpg) no-repeat;
+    background-color: #edeef0;
     background-size: contain;
     background-position-x: 0;
     padding: 155px 30px 50px;
@@ -568,8 +605,8 @@ header{
 
     .chatbox{
         padding: 50px;
-        background: white;
         text-align: center;
+        background-color: white;
 
         @include desktop{
             width: 50%;
@@ -618,7 +655,6 @@ header{
 }
 
 .instagram{
-    background: white;
     padding-bottom: 30px;
 
     .tours-text{
@@ -661,30 +697,27 @@ header{
         height: 250px;
         margin: 6px;
         position: relative;
+        background-size: cover;
+        border-bottom: 30px solid green;
 
         &:nth-child(1){
-            background: url(../img/instagram1.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #fa5b00;
+            background-image: url(../img/instagram1.jpg);
+            border-bottom-color: #fa5b00;
         }
 
         &:nth-child(2){
-            background: url(../img/instagram2.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #538ba3;
+            background-image: url(../img/instagram2.jpg);
+            border-bottom-color: #538ba3;
         }
 
         &:nth-child(3){
-            background: url(../img/instagram3.jpg);
-            background-size: cover;
-            border-bottom: 30px solid #e52e1f;
+            background-image: url(../img/instagram3.jpg);
+            border-bottom-color: #e52e1f;
         }
 
         &:nth-child(4){
-            background: url(../img/instagram4.jpg);
-            background-size: cover;
-            
-            border-bottom: 30px solid #0f161d;
+            background-image: url(../img/instagram4.jpg);
+            border-bottom-color: #0f161d;
         }
     }
 }

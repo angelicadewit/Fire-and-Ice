@@ -73,7 +73,7 @@ table {
 }
 
 body {
-	background: #ccc;
+	background: #fff;
 	font-family: sans-serif;
 	transition: 0.2s;
 	font-weight: lighter;
@@ -106,7 +106,7 @@ header h1 {
 	font-family: "areno_roughregular";
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	header .mobile-logo {
 		visibility: hidden;
 	}
@@ -116,7 +116,7 @@ header .desktop-logo {
 	visibility: hidden;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	header .desktop-logo {
 		visibility: visible;
 		display: block;
@@ -137,7 +137,7 @@ header .desktop-logo {
 	transition: opacity .25s ease;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.hamburger {
 		display: none;
 	}
@@ -195,7 +195,7 @@ header .desktop-logo {
 	overflow: hidden;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.overlay {
 		visibility: visible;
 		height: 12%;
@@ -246,7 +246,7 @@ header .desktop-logo {
 	text-align: center;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.overlay nav {
 		height: 100%;
 	}
@@ -261,7 +261,7 @@ header .desktop-logo {
 	height: 100%;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.overlay ul {
 		display: flex;
 		justify-content: space-around;
@@ -270,7 +270,7 @@ header .desktop-logo {
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.overlay ul .left-nav,
 	.overlay ul .right-nav {
 		flex-grow: 1;
@@ -288,7 +288,7 @@ header .desktop-logo {
 	opacity: 0;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.overlay ul li {
 		opacity: 1;
 	}
@@ -324,18 +324,33 @@ header .desktop-logo {
 }
 
 .hero {
-	background: url(../img/heroExploreWorldslarge.jpg) no-repeat;
+	position: relative;
+	background: url(../img/home-background.jpg) no-repeat;
 	background-color: black;
 	background-size: cover;
+	background-position: 50% 100%;
 	width: 100%;
 	display: inline-block;
 	transition: 0.2s;
 }
 
-@media only screen and (min-width: 1280px) {
-	.hero {
-		background-position-y: -100px;
-	}
+.hero .layered-for-text-wrapped {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/home-foreground.png) no-repeat;
+	background-size: cover;
+	background-position: 50% 100%;
+}
+
+.hero .layered-for-text {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .hero .hero-text {
@@ -346,7 +361,7 @@ header .desktop-logo {
 	margin-top: 32%;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.hero .hero-text {
 		margin: 3% 0% 20%;
 	}
@@ -354,35 +369,48 @@ header .desktop-logo {
 
 .hero .hero-text h2 {
 	font-size: 2.5em;
-	padding-top: 20%;
 	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-evenly;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
+	.hero .hero-text h2 {
+		padding-top: 20%;
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
 	.hero .hero-text h2 .first-word-h2 {
 		text-align: left;
 		margin: -9% 7%;
-		font-size: 2.5em;
+		font-size: 6.5vw;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.hero .hero-text h2 .second-word-h2 {
 		text-align: center;
 		margin: 9%;
-		font-size: 3em;
+		font-size: 7vw;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.hero .hero-text h2 .third-word-h2 {
 		text-align: right;
 		margin: -13% 7%;
-		font-size: 3.5em;
+		font-size: 7.5vw;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+.hero .hero-text .hero-span {
+	position: relative;
+	z-index: 3;
+}
+
+@media only screen and (min-width: 1024px) {
 	.hero .hero-text .hero-span {
 		font-size: 3em;
 		margin: 15%;
@@ -402,7 +430,7 @@ header .desktop-logo {
 	margin: 50px 0px 100px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.hero button {
 		display: none;
 	}
@@ -422,11 +450,11 @@ header .desktop-logo {
 .about h3 {
 	font-family: "areno_roughregular";
 	color: red;
-	font-size: 1em;
+	font-size: 1.5em;
 	padding: 40px 0px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.about h3 {
 		font-size: 2em;
 		padding: 30px;
@@ -437,7 +465,7 @@ header .desktop-logo {
 	display: block;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.about span {
 		display: inline;
 	}
@@ -449,7 +477,7 @@ header .desktop-logo {
 	font-size: 20px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.about p {
 		max-width: 600px;
 		margin: 0 auto;
@@ -468,7 +496,6 @@ header .desktop-logo {
 }
 
 .tours {
-	background: white;
 	padding-bottom: 30px;
 }
 
@@ -497,7 +524,7 @@ header .desktop-logo {
 	width: 1080px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.tours .popular-tours-list {
 		width: 100%;
 		display: flex;
@@ -512,9 +539,11 @@ header .desktop-logo {
 	height: 300px;
 	margin: 6px;
 	position: relative;
+	background-size: cover;
+	border-bottom: 30px solid green;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.tours .popular-tour {
 		width: 350px;
 		height: 400px;
@@ -532,26 +561,29 @@ header .desktop-logo {
 	color: white;
 }
 
+@media only screen and (min-width: 1024px) {
+	.tours .popular-tour .pop-tour-desc span {
+		font-size: 2.5em;
+	}
+}
+
 .tours .popular-tour:last-child {
 	margin-right: 0;
 }
 
 .tours .popular-tour.norlights {
 	background: url(../img/northernlights-mobile.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #0f161d;
+	border-bottom-color: #0f161d;
 }
 
 .tours .popular-tour.blulagoon {
 	background: url(../img/bluelagoon-mobile.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #00806f;
+	border-bottom-color: #00806f;
 }
 
 .tours .popular-tour.volunderground {
 	background: url(../img/volcanopark-mobile.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #fa5b00;
+	border-bottom-color: #fa5b00;
 }
 
 .tours .popular-tour.vantpark {
@@ -568,6 +600,7 @@ header .desktop-logo {
 
 .chatbox-sect {
 	background: url(../img/chatexpert.jpg) no-repeat;
+	background-color: #edeef0;
 	background-size: contain;
 	background-position-x: 0;
 	padding: 155px 30px 50px;
@@ -576,7 +609,7 @@ header .desktop-logo {
 	font-size: 18px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.chatbox-sect {
 		padding: 0px;
 	}
@@ -584,11 +617,11 @@ header .desktop-logo {
 
 .chatbox-sect .chatbox {
 	padding: 50px;
-	background: white;
 	text-align: center;
+	background-color: white;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.chatbox-sect .chatbox {
 		width: 50%;
 		margin: 0 50%;
@@ -604,7 +637,7 @@ header .desktop-logo {
 	width: 35px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.chatbox-sect .chatbox .talkicon {
 		width: 40px;
 	}
@@ -617,7 +650,7 @@ header .desktop-logo {
 	color: #538ba3;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.chatbox-sect h3 {
 		font-size: 38px;
 	}
@@ -639,7 +672,6 @@ header .desktop-logo {
 }
 
 .instagram {
-	background: white;
 	padding-bottom: 30px;
 }
 
@@ -648,7 +680,7 @@ header .desktop-logo {
 	position: relative;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.instagram .tours-text {
 		text-align: left;
 		padding-left: 30px;
@@ -674,7 +706,7 @@ header .desktop-logo {
 	width: 868px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	.instagram .popular-tours-list {
 		width: 100%;
 	}
@@ -687,30 +719,28 @@ header .desktop-logo {
 	height: 250px;
 	margin: 6px;
 	position: relative;
+	background-size: cover;
+	border-bottom: 30px solid green;
 }
 
 .instagram .popular-tour:nth-child(1) {
-	background: url(../img/instagram1.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #fa5b00;
+	background-image: url(../img/instagram1.jpg);
+	border-bottom-color: #fa5b00;
 }
 
 .instagram .popular-tour:nth-child(2) {
-	background: url(../img/instagram2.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #538ba3;
+	background-image: url(../img/instagram2.jpg);
+	border-bottom-color: #538ba3;
 }
 
 .instagram .popular-tour:nth-child(3) {
-	background: url(../img/instagram3.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #e52e1f;
+	background-image: url(../img/instagram3.jpg);
+	border-bottom-color: #e52e1f;
 }
 
 .instagram .popular-tour:nth-child(4) {
-	background: url(../img/instagram4.jpg);
-	background-size: cover;
-	border-bottom: 30px solid #0f161d;
+	background-image: url(../img/instagram4.jpg);
+	border-bottom-color: #0f161d;
 }
 
 footer {
@@ -721,7 +751,7 @@ footer {
 	display: flex;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	footer {
 		justify-content: space-between;
 		align-items: center;
@@ -735,7 +765,7 @@ footer span {
 	padding-top: 5px;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	footer span {
 		display: inline;
 	}
@@ -745,7 +775,7 @@ footer .contact-info {
 	text-align: right;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	footer .contact-info {
 		display: flex;
 		flex-grow: 1;
