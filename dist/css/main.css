@@ -345,6 +345,14 @@ header .desktop-logo {
 	background-position: 50% 100%;
 }
 
+@media only screen and (min-width: 1024px) {
+	.hero .layered-for-text-wrapped {
+		background: url(../img/home-foreground-desktop.png) no-repeat;
+		background-size: cover;
+		background-position: 50% 100%;
+	}
+}
+
 .hero .layered-for-text {
 	width: 100%;
 	height: auto;
@@ -383,7 +391,7 @@ header .desktop-logo {
 
 @media only screen and (min-width: 1024px) {
 	.hero .hero-text h2 {
-		padding-top: 20%;
+		margin-top: 20%;
 		display: block;
 	}
 }
@@ -391,7 +399,7 @@ header .desktop-logo {
 @media only screen and (min-width: 1024px) {
 	.hero .hero-text h2 .first-word-h2 {
 		text-align: left;
-		margin: -9% 7%;
+		margin: -8% 7%;
 		font-size: 6.5vw;
 	}
 }
@@ -419,6 +427,12 @@ header .desktop-logo {
 	}
 }
 
+@media only screen and (min-width: 1024px) {
+	.hero .hero-text h2 .zindex-span {
+		z-index: 0;
+	}
+}
+
 .hero .hero-text .hero-span {
 	position: relative;
 	z-index: 3;
@@ -432,7 +446,7 @@ header .desktop-logo {
 
 @media only screen and (min-width: 1024px) {
 	.hero .hero-text .hero-span {
-		font-size: 3em;
+		font-size: 2.5em;
 		margin: 15%;
 		position: relative;
 		display: block;
@@ -515,6 +529,7 @@ header .desktop-logo {
 @media only screen and (min-width: 1024px) {
 	.about p {
 		max-width: 600px;
+		padding: 0px 2% 5%;
 		margin: 0 auto;
 	}
 }
@@ -638,7 +653,7 @@ header .desktop-logo {
 	background-color: #edeef0;
 	background-size: contain;
 	background-position-x: 0;
-	padding: 155px 30px 50px;
+	padding: 35% 5% 10%;
 	color: #3a343a;
 	line-height: 1.5em;
 	font-size: 18px;
@@ -685,14 +700,21 @@ header .desktop-logo {
 	color: #538ba3;
 }
 
+@media only screen and (min-width: 640px) {
+	.chatbox-sect h3 {
+		font-size: 25px;
+	}
+}
+
 @media only screen and (min-width: 1024px) {
 	.chatbox-sect h3 {
-		font-size: 38px;
+		font-size: 2em;
 	}
 }
 
 .chatbox-sect span {
 	display: inline-block;
+	padding-top: 10px;
 }
 
 .chatbox-sect button {
@@ -744,6 +766,8 @@ header .desktop-logo {
 @media only screen and (min-width: 1024px) {
 	.instagram .popular-tours-list {
 		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
 	}
 }
 
@@ -784,6 +808,13 @@ footer {
 	padding: 20px 20px 50px;
 	font-size: 15px;
 	display: flex;
+}
+
+@media only screen and (min-width: 640px) {
+	footer {
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 @media only screen and (min-width: 1024px) {

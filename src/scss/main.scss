@@ -343,8 +343,9 @@ header{
         background-position: 50% 100%;
 
         @include desktop{
-            // background-position-y: -100px;
-            // height: 50vw;
+            background: url(../img/home-foreground-desktop.png) no-repeat;
+            background-size: cover;
+            background-position: 50% 100%;
         }
     }
 
@@ -386,7 +387,7 @@ header{
             }
 
             @include desktop{
-                padding-top: 20%;
+                margin-top: 20%;
                 display: block;
             }
 
@@ -394,7 +395,7 @@ header{
 
                 @include desktop{
                     text-align: left;
-                    margin: -9% 7%;
+                    margin: -8% 7%;
                     font-size: 6.5vw;
                 }
             }
@@ -423,6 +424,10 @@ header{
                     position: relative;
                     z-index: 3;
                 }
+
+                @include desktop{
+                    z-index: 0;
+                }
             }
         }
 
@@ -434,7 +439,7 @@ header{
                 font-size: 1.5em;
             }
             @include desktop{
-                font-size: 3em;
+                font-size: 2.5em;
                 margin: 15%;
                 position: relative;
                 display: block;
@@ -508,6 +513,7 @@ header{
 
         @include desktop{
             max-width: 600px;
+            padding: 0px 2% 5%;
             margin: 0 auto;
         }
     }
@@ -627,7 +633,7 @@ header{
     background-color: #edeef0;
     background-size: contain;
     background-position-x: 0;
-    padding: 155px 30px 50px;
+    padding: 35% 5% 10%;
     color: #3a343a;
     line-height: 1.5em;
     font-size: 18px;
@@ -666,13 +672,18 @@ header{
         padding: 20px 0px;
         color: #538ba3;
 
+        @include tablet{
+            font-size: 25px;
+        }
+
         @include desktop{
-            font-size: 38px;
+            font-size: 2em;
         }
     }
 
     span{
         display: inline-block;
+        padding-top: 10px;
     }
 
     button{
@@ -720,6 +731,8 @@ header{
 
         @include desktop{
             width: 100%;
+            display: flex;
+            justify-content: space-evenly;
         }
     }
 
@@ -761,6 +774,11 @@ footer{
     padding: 20px 20px 50px;
     font-size: 15px;
     display: flex;
+
+    @include tablet{
+        justify-content: space-between;
+        align-items: center;
+    }
 
     @include desktop{
         justify-content: space-between;
