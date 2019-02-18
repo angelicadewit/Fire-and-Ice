@@ -224,15 +224,6 @@ header{
             &:nth-of-type(3) {
                 animation-delay: .45s;
             }
-            &:nth-of-type(4) {
-                animation-delay: .50s;
-            }
-            &:nth-of-type(5) {
-                animation-delay: .55s;
-            }
-            &:nth-of-type(6) {
-                animation-delay: .60s;
-            }
         }
     }
 
@@ -406,7 +397,7 @@ header{
         
 
         h2{
-            font-size: 2.5em;
+            font-size: 2em;
             padding-bottom: 10%;
             display: flex;
             justify-content: space-evenly;
@@ -506,6 +497,12 @@ header{
             display: none;
         }
     }
+
+    #pixiCanvas{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }    
 }
 
 .about{

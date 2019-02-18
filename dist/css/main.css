@@ -229,18 +229,6 @@ header .desktop-logo {
 	animation-delay: .45s;
 }
 
-.hamburger_open .overlay li:nth-of-type(4) {
-	animation-delay: .50s;
-}
-
-.hamburger_open .overlay li:nth-of-type(5) {
-	animation-delay: .55s;
-}
-
-.hamburger_open .overlay li:nth-of-type(6) {
-	animation-delay: .60s;
-}
-
 .overlay nav {
 	position: relative;
 	font-size: 50px;
@@ -397,7 +385,7 @@ header .desktop-logo {
 }
 
 .hero .hero-text h2 {
-	font-size: 2.5em;
+	font-size: 2em;
 	padding-bottom: 10%;
 	display: flex;
 	justify-content: space-evenly;
@@ -506,6 +494,12 @@ header .desktop-logo {
 	.hero button {
 		display: none;
 	}
+}
+
+.hero #pixiCanvas {
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .about {

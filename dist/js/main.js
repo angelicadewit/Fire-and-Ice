@@ -21,7 +21,6 @@ window.addEventListener("load", function () {
 
 
 window.addEventListener("mousemove", function (e) {
-    console.log(e);
 
     var mouseX = e.clientX / window.innerWidth;
 
