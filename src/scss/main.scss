@@ -54,6 +54,8 @@ $body-text: 'helvetica-light';
 
 $tablet-breakpoint: 640px;
 $desktop-breakpoint: 1024px;
+$bigdesktop-breakpoint: 1100px;
+$superbigdesktop-breakpoint: 1400px;
 
 @mixin tablet {
 	@media only screen and (min-width: $tablet-breakpoint){
@@ -66,6 +68,20 @@ $desktop-breakpoint: 1024px;
 		@content;
 	}
 }
+
+@mixin bg-desktop {
+	@media only screen and (min-width: $bigdesktop-breakpoint){
+		@content;
+	}
+}
+
+@mixin superbg-desktop {
+	@media only screen and (min-width: $superbigdesktop-breakpoint){
+		@content;
+	}
+}
+
+
 
 
 
@@ -83,10 +99,14 @@ header{
     justify-content: center;
     align-items: center;
     z-index: 100;
-    
+
+
+    @include desktop{
+        height: auto;
+    }
 
     h1{
-        // text-align: center;
+        text-align: center;
         // flex-grow: 1;
         color: $color-header;
         text-transform: uppercase;
@@ -96,20 +116,20 @@ header{
 
     .mobile-logo{
         @include desktop{
-            visibility: hidden;
+            display: none;
         }
     }
 
     .desktop-logo{
-        visibility: hidden;
+        display: none;
+        position: relative;
+        top: 5px;
+        color: #e52e1f;
+        font-size: 30px;
+        margin: 0 20px 0 50px;
 
         @include desktop{
-            visibility: visible;
             display: block;
-            position: relative;
-            top: 5px;
-            color: #e52e1f;
-            font-size: 30px;
         }
     }
 }
@@ -132,7 +152,7 @@ header{
 	    opacity: .7;
     }
 
-    &.active {
+    .hamburger_open & {
         .top {
             transform: translateY(11px) translateX(0) rotate(45deg);
             background: $color-active;
@@ -175,21 +195,21 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 0%;
+    // height: 0%;
     opacity: 0;
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
 
     @include desktop{
+        position: relative;
         visibility: visible;
-        height: 12%;
         opacity: 1;
         background: rgba(0, 0, 0, 0.0);
 
     }
     
-    &.open {
+    .hamburger_open & {
         opacity: .9;
         visibility: visible;
         height: 100%;
@@ -218,16 +238,18 @@ header{
 
     nav {
         position: relative;
-        height: 50%;
-        top: 50%;
-        transform: translateY(-50%);
+        // height: 50%;
+        // top: 50%;
+        // transform: translateY(-50%);
         font-size: 50px;
         font-family: 'Varela Round', serif;
         font-weight: 400;
         text-align: center;
+        height: 100%;
+        
 
         @include desktop{
-            height: 100%;
+            height: auto;
         }
     }
 
@@ -235,12 +257,14 @@ header{
         list-style: none;
         padding: 0;
         margin: 0 auto;
-        display: inline-block;
         position: relative;
         height: 100%; 
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
         @include desktop{
-            display: flex;
+            height: auto; 
             justify-content: space-around;
             flex-direction: row;
             align-items: baseline;
@@ -248,6 +272,7 @@ header{
         
         .left-nav,
         .right-nav{
+            display: inline;
             @include desktop{
                 flex-grow: 1;
                 display: flex;
@@ -257,9 +282,9 @@ header{
 
         li {
             display: block;
-            height: 25%;
-            height: calc(100% / 4);
-            min-height: 50px;
+            // height: 25%;
+            // height: calc(100% / 4);
+            // min-height: 50px;
             position: relative;
             opacity: 0;
     
@@ -275,11 +300,11 @@ header{
                 text-decoration: none;
                 text-transform: uppercase;
                 overflow: hidden;
-                font-size: 20px;
+                font-size: 17px;
                 padding: 20px;
                 transition: .35s;
-                font-family: Arial, Helvetica, sans-serif;
-
+                font-family: Helvetica, Arial, sans-serif;
+                letter-spacing: 4px;
                 
                 &:hover,
                 &:focus,
@@ -364,14 +389,19 @@ header{
         color: white;
         text-align: center;
         position: relative;
-        margin-top: 32%;
+        // margin-top: 32%;
+        margin: 30% 0% 25%;
 
-        // @include tablet{
-        //     margin: 3% 0% 20%;
-        // }
+        @include tablet{
+            margin: 35% 0% 25%;
+        }
 
         @include desktop{
-            margin: 3% 0% 20%;
+            margin: 25% 0% 22%;
+        }
+
+        @include superbg-desktop{
+            margin: 25% 0% 23%;
         }
         
 
@@ -380,22 +410,29 @@ header{
             padding-bottom: 10%;
             display: flex;
             justify-content: space-evenly;
-
+            position: relative;
+            
             @include tablet{
                 font-size: 4em;
                 padding-bottom: 50px;
             }
-
+            
             @include desktop{
                 margin-top: 20%;
                 display: block;
             }
-
+            
+            .first-word-h2,
+            .second-word-h2,
+            .third-word-h2 {
+                position: relative;
+                opacity: 0;
+            }
             .first-word-h2{
 
                 @include desktop{
                     text-align: left;
-                    margin: -8% 7%;
+                    margin: -8.7% 7%;
                     font-size: 6.5vw;
                 }
             }
@@ -404,7 +441,7 @@ header{
 
                 @include desktop{
                     text-align: center;
-                    margin: 9%;
+                    margin: 9.7%;
                     font-size: 7vw;
                 }
             }
@@ -413,7 +450,7 @@ header{
 
                 @include desktop{
                     text-align: right;
-                    margin: -13% 7%;
+                    margin: -13.7% 7%;
                     font-size: 7.5vw;
                 }
             }
@@ -527,6 +564,17 @@ header{
         background: black;
         border: 1px solid #f97a32;
         margin-bottom: 40px;
+        transition: 0.5s;
+
+        &:hover{
+            background: #f97a32;
+            color: black;
+            cursor: pointer;
+        }
+
+        @include desktop{
+            font-size: 24px;
+        }
     }
 }
 
@@ -573,6 +621,21 @@ header{
         position: relative;
         background-size: cover;
         border-bottom: 30px solid green;
+        transition: 0.10s;
+
+        &:hover{
+            cursor: pointer;
+            // filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+
+            .pop-tour-desc{
+                padding-bottom: 85%;
+                transition: 0.2s;
+
+                span{
+                    color: #f97a32;
+                }
+            }
+        }
 
         @include desktop{
             width: 350px;
@@ -583,13 +646,14 @@ header{
             position:absolute;
             bottom: 0;
             padding-bottom: 25px;
+            transition: 0.2s;
 
             span{
                 padding: 0px 0px 0px 20px;
                 color: white;
                 
                 @include desktop{
-                    font-size: 1.85em
+                    font-size:2rem
                 }
             }
         }
@@ -601,28 +665,56 @@ header{
         &.norlights{
             background: url(../img/northernlights-mobile.jpg);
             border-bottom-color: #0f161d;
-        }
 
+            &:hover{
+                background-color: blue;
+                background-blend-mode: luminosity;
+            }
+        }
         &.blulagoon{
             background: url(../img/bluelagoon-mobile.jpg);
             border-bottom-color: #00806f;
+
+
+            &:hover{
+                background-color: blue;
+                background-blend-mode: luminosity;
+            }
         }
 
         &.volunderground{
             background: url(../img/volcanopark-mobile.jpg);
             border-bottom-color: #fa5b00;
+
+
+            &:hover{
+                background-color: blue;
+                background-blend-mode: luminosity;
+            }
         }
 
         &.vantpark{
             background: url(../img/park-mbile.jpg);
             background-size: cover;
             border-bottom: 30px solid #538ba3;
+
+
+            &:hover{
+                background-color: blue;
+                background-blend-mode: luminosity;
+            }
         }
 
         &.golcircle{
             background: url(../img/goldencircle-mobile.jpg);
             background-size: cover;
             border-bottom: 30px solid #e52e1f;
+
+
+            &:hover{
+                background-color: blue;
+                background-blend-mode: luminosity;
+            }
         }
     }
 }
@@ -695,6 +787,14 @@ header{
         background: white;
         border: 1px solid #f97a32;
         margin-top: 30px;
+        transition: 0.2s;
+
+        &:hover{
+            color: white;
+            background: #f97a32;
+            cursor: pointer;
+            transition: 0.2s;
+        }
     }
 }
 
